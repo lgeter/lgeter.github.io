@@ -3,8 +3,10 @@ sequenceDiagram
 	participant BotNet
 	participant WebServer
 	participant Firewall
-	Attacker->>Botnet: Traffic generator
+	
+  	Attacker->>BotNet: Traffic generator
 	Botnet->>Webserver: UDP Flood
+ 	rect rgb(255, 0, 0)
 	Firewall->>Webserver: Block traffic
 	
 	1. The attacker sends program to bots on the botnet.
